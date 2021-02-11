@@ -1,0 +1,2 @@
+console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");let toggle=document.querySelector(".toggle");toggle.addEventListener("click",(function(e){console.log("it works"),document.querySelector("nav").classList.toggle("coolTog")}));
+//# sourceMappingURL=main.js.map

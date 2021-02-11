@@ -1,0 +1,27 @@
+// 0 breakpoints ==================================== 
+// small tablets and large smartphones (landscape view)
+$breakpoint-phone: 576px;
+
+// small tablets (portrait view)
+$breakpoint-tablet: 768px;
+
+// tablets and small desktops
+$breakpoint-desktop: 992px;
+
+//large tabletss and desktops
+$breakpoint-xl: 1200px;
+
+
+// * 1. Colors =======================================
+$white: #fff;
+$black: rgb(32, 32, 32);
+
+
+
+// * 2. Fonts ==========================================
+
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap');
+
+
+$main-font:'Spartan', sans-serif;
