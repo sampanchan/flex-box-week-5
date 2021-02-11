@@ -9,7 +9,7 @@ toggle.addEventListener('click', function(event){
 console.log('it works')
 let toggle = document.querySelector('nav')
 toggle.classList.toggle('coolTog')
-let blurBackground = document.querySelector('.container')
-blurBackground.style.blur= '10px'
+// let blurBackground = document.querySelector('.container')
+// blurBackground.style.filter= "blur(10px)"
 
 })

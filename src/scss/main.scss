@@ -70,6 +70,7 @@ body {
 				display: flex;
 				flex-direction: row-reverse;
 				margin-right: auto;
+				// position: relative;
 				padding: 20px;
 				margin-top: 25px;
 				@include mixins.bp-medium{
@@ -105,7 +106,10 @@ body {
 						a{
 							text-decoration: none;
 							list-style-type: none;
-							color: white;
+							color: black;
+							@include mixins.bp-medium{
+								color: white;
+							}
 							&:hover{
 								color: rgb(189, 166, 219);
 								border-bottom: 1px solid rgb(189, 166, 219);
@@ -117,13 +121,9 @@ body {
 				}
 				.toggle{
 					display:flex;
-					flex-direction: column;
-					// border: #cccccc solid 1px;  
+					flex-direction: column; 
 					padding: 6px;
 					cursor: pointer;
-					// &:hover{
-					// 	filter: blur(10px);
-					// }
 					@include mixins.bp-medium{
 						display: none;
 					}
@@ -141,33 +141,39 @@ body {
 					display: block;
 					background-color: white;
 					width: 100%;
-					// padding: 10px; 
-					// border-radius: 20px;
-					margin: 0 auto;
 					color:black;
 				}
 			}
 			
 		}
 		.arrows{
-			background: black;
+			background-color: black;
 			display:flex;
 			flex-direction: row;
 			height: 10vh;
-			width:20vh;
+			width:15vh;
 			margin-left: auto;
 			margin-top:-10vh ;
+
+			
 			
 			@include mixins.bp-medium{
 				margin-top: 55vh;
 				height: 10vh;
 				width:40vh;
 			}
+
+		
 			// .arrow_left{
 			// 	transform: rotate(-180deg);
-			// 	width: 20px;
+			// 	width: 30px;
 			// 	margin: auto;
 			// 	flex-grow: .5;
+			// 	&:hover{
+			// 		color: rgb(189, 166, 219);
+					
+			// 		transition: color 0.3s ease; 
+			// 	}
 				
 	
 			// }
@@ -183,6 +189,7 @@ body {
 				flex-direction: column;
 				margin: auto;
 				margin-right: 1px;
+				background-color: black;
 				&:hover{
 					color: #A0A0A0;;
 					// margin: 20px;
@@ -209,6 +216,10 @@ body {
 				display: flex;
 				flex-direction: column;
 				margin: auto;
+				.arrows_right:hover .right_skew_down,
+				.arrows_right:hover .right_skew_up {
+					color: blue;
+}
 				>div{
 					background-color: white;
 					width: 15px;
@@ -270,12 +281,23 @@ body {
 					.learn_arrow_head{
 					display: flex;
 					flex-direction: column;
-					background-color: black;
+					justify-content: space-between;
+					// background-color: black;
 					width: 15px;
-					height: 2px;
+					// height: 2px;
 					margin: 1px;
 				
-				
+						.learn_arrow_top{
+							background-color: black;
+							height: 1px;
+							transform: rotate(45deg);
+						}
+						.learn_arrow_bottom{
+							background-color: black;
+							height: 1px;
+							transform: rotate(-45deg);
+						}
+						
 					}
 				}
 			}
@@ -295,9 +317,9 @@ body {
 			width: 100vw;
 			height: 40vh;
 			&:hover{
-				transform: scale(1.1);
+				background-color: rgb(193, 193, 243);
+				background-blend-mode: multiply;
 				transition: ease-in-out .3s;
-				transform-origin: 50% 50% 50% 50%;
 			}
 			@include mixins.bp-medium{
 				height: 35vh;
@@ -312,9 +334,11 @@ body {
 			height: 40vh;
 			
 			&:hover{
-				transform: scale(1.1);
+				// transform: scale(1.1);
+				background-color: rgb(160, 160, 177);
+				background-blend-mode: multiply;
 				transition: ease-in-out .3s;
-				transform-origin: 50% 50% 50% 50%;
+				// transform-origin: 50% 50% 50% 50%;
 			}
 			@include mixins.bp-medium{
 				height: 35vh;

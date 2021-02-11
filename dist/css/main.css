@@ -238,7 +238,12 @@ body {
 .container .container_flex_top header .header_section > nav > ul > li a {
   text-decoration: none;
   list-style-type: none;
-  color: white;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .container .container_flex_top header .header_section > nav > ul > li a {
+    color: white;
+  }
 }
 .container .container_flex_top header .header_section > nav > ul > li a:hover {
   color: #bda6db;
@@ -269,15 +274,14 @@ body {
   display: block;
   background-color: white;
   width: 100%;
-  margin: 0 auto;
   color: black;
 }
 .container .container_flex_top .arrows {
-  background: black;
+  background-color: black;
   display: flex;
   flex-direction: row;
   height: 10vh;
-  width: 20vh;
+  width: 15vh;
   margin-left: auto;
   margin-top: -10vh;
 }
@@ -293,6 +297,7 @@ body {
   flex-direction: column;
   margin: auto;
   margin-right: 1px;
+  background-color: black;
 }
 .container .container_flex_top .arrows .arrows_left:hover {
   color: #A0A0A0;
@@ -315,6 +320,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+.container .container_flex_top .arrows .arrows_right .arrows_right:hover .right_skew_down,
+.container .container_flex_top .arrows .arrows_right .arrows_right:hover .right_skew_up {
+  color: blue;
 }
 .container .container_flex_top .arrows .arrows_right > div {
   background-color: white;
@@ -378,10 +387,21 @@ body {
 .container .container_flex_top .content_main .learn .learn_arrow .learn_arrow_head {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  justify-content: space-between;
   width: 15px;
-  height: 2px;
   margin: 1px;
+}
+.container .container_flex_top .content_main .learn .learn_arrow .learn_arrow_head .learn_arrow_top {
+  background-color: black;
+  height: 1px;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+.container .container_flex_top .content_main .learn .learn_arrow .learn_arrow_head .learn_arrow_bottom {
+  background-color: black;
+  height: 1px;
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 .container .container_flex_bottom {
   overflow: hidden;
@@ -401,11 +421,9 @@ body {
   height: 40vh;
 }
 .container .container_flex_bottom .image_one:hover {
-  -ms-transform: scale(1.1);
-      transform: scale(1.1);
+  background-color: #c1c1f3;
+  background-blend-mode: multiply;
   transition: ease-in-out 0.3s;
-  -ms-transform-origin: 50% 50% 50% 50%;
-      transform-origin: 50% 50% 50% 50%;
 }
 @media screen and (min-width: 768px) {
   .container .container_flex_bottom .image_one {
@@ -422,11 +440,9 @@ body {
   height: 40vh;
 }
 .container .container_flex_bottom .image_two:hover {
-  -ms-transform: scale(1.1);
-      transform: scale(1.1);
+  background-color: #a0a0b1;
+  background-blend-mode: multiply;
   transition: ease-in-out 0.3s;
-  -ms-transform-origin: 50% 50% 50% 50%;
-      transform-origin: 50% 50% 50% 50%;
 }
 @media screen and (min-width: 768px) {
   .container .container_flex_bottom .image_two {
