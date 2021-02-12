@@ -417,7 +417,7 @@ body {
   background-repeat: no-repeat;
   -o-object-fit: fill;
      object-fit: fill;
-  width: 100vw;
+  width: 130vw;
   height: 40vh;
 }
 .container .container_flex_bottom .image_one:hover {
@@ -427,7 +427,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container .container_flex_bottom .image_one {
-    height: 35vh;
+    height: 40vh;
   }
 }
 .container .container_flex_bottom .image_two {
@@ -436,7 +436,7 @@ body {
   background-repeat: no-repeat;
   -o-object-fit: fill;
      object-fit: fill;
-  width: 100vw;
+  width: 120vw;
   height: 40vh;
 }
 .container .container_flex_bottom .image_two:hover {
@@ -446,7 +446,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container .container_flex_bottom .image_two {
-    height: 35vh;
+    height: 40vh;
   }
 }
 .container .container_flex_bottom .content_second {
@@ -454,7 +454,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container .container_flex_bottom .content_second {
-    margin: auto 30px 90px;
+    margin: auto 30px 0px;
   }
 }
 .container .container_flex_bottom .content_second > h3 {

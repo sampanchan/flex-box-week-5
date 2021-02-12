@@ -314,7 +314,7 @@ body {
 			background-size: cover;
 			background-repeat: no-repeat;
 			object-fit: fill;
-			width: 100vw;
+			width: 130vw;
 			height: 40vh;
 			&:hover{
 				background-color: rgb(193, 193, 243);
@@ -322,7 +322,7 @@ body {
 				transition: ease-in-out .3s;
 			}
 			@include mixins.bp-medium{
-				height: 35vh;
+				height: 40vh;
 			}
 		}
 		.image_two{
@@ -330,7 +330,7 @@ body {
 			background-size: cover;
 			background-repeat: no-repeat;
 			object-fit: fill;
-			width: 100vw;
+			width: 120vw;
 			height: 40vh;
 			
 			&:hover{
@@ -341,14 +341,14 @@ body {
 				// transform-origin: 50% 50% 50% 50%;
 			}
 			@include mixins.bp-medium{
-				height: 35vh;
+				height: 40vh;
 			}
 		}
 		.content_second{
 			margin: 60px 30px 60px 30px;
 			
 			@include mixins.bp-medium{
-				margin: auto 30px 90px;
+				margin: auto 30px 0px;
 			}
 			>h3{
 				font-size: 13px;
