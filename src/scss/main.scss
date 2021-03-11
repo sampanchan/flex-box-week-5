@@ -54,8 +54,8 @@ body {
 		height: 50vh;
 		font-weight: bold;
 		color: white;
-		display: flex;
-		justify-content: space-evenly;
+		// display: flex;
+		// justify-content: space-evenly;
 		margin: 0 auto;
 		@include mixins.bp-medium{
 			background-image: url(/src/img/main_image.png);
@@ -79,9 +79,16 @@ body {
 			
 			>h1{
 				font-size: 30px;
+				margin: 0 auto;
+				position: absolute;
+				top:1rem;
+				left: 14rem;
 				
 				@include mixins.bp-medium{
 					margin: 0px;
+					
+					top: 2.5rem;
+					left: 2.5rem;
 				}
 				
 			}
@@ -143,6 +150,8 @@ body {
 					position: relative;
 					height: auto;	
 					width: auto;
+					top: 1.5rem;
+    				left: 9rem;
 				}
 				nav{
 					display: none;
@@ -184,6 +193,7 @@ body {
 									}
 									@include mixins.bp-medium{
 										color: variables.$white;
+										padding:20px;
 									}
 								}	
 							}	

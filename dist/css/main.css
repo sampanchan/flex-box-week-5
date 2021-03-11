@@ -184,8 +184,6 @@ body {
   height: 50vh;
   font-weight: bold;
   color: white;
-  display: flex;
-  justify-content: space-evenly;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -207,10 +205,16 @@ body {
 }
 .top-part header .header_section > h1 {
   font-size: 30px;
+  margin: 0 auto;
+  position: absolute;
+  top: 1rem;
+  left: 14rem;
 }
 @media screen and (min-width: 768px) {
   .top-part header .header_section > h1 {
     margin: 0px;
+    top: 2.5rem;
+    left: 2.5rem;
   }
 }
 .top-part header .header_section .toggle {
@@ -270,6 +274,8 @@ body {
     position: relative;
     height: auto;
     width: auto;
+    top: 1.5rem;
+    left: 9rem;
   }
 }
 .top-part header .header_section .nav nav {
@@ -318,6 +324,7 @@ body {
 @media screen and (min-width: 768px) {
   .top-part header .header_section .nav nav ul li a {
     color: #fff;
+    padding: 20px;
   }
 }
 .top-part .content_main {
