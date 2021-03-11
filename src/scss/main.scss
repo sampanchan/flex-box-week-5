@@ -40,204 +40,158 @@ body {
 
 /* 2. Content ================================= */
 
-.container{
-	// @include mixins.bp-medium{
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// }
-	.container_flex_top{
+.top-part{
+	display: flex;
+	flex-direction: column;
+	@include mixins.bp-medium{
+		flex-direction: row;
+	}
+	header{
+		background-image: url(/src/img/Bitmap.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100vw;
+		height: 50vh;
+		font-weight: bold;
+		color: white;
+		display: flex;
+		justify-content: space-evenly;
+		margin: 0 auto;
 		@include mixins.bp-medium{
-			display: flex;
-		}
-		
-		header{
-			background-image: url(/src/img/Bitmap.png);
+			background-image: url(/src/img/main_image.png);
+			// height: 65vh;
+			// width: 170vw;
+			height: 60vh;
+			text-align: left;
+			
 			background-size: cover;
-			background-repeat: no-repeat;
-			width: 100vw;
-			height: 50vh;
-			font-weight: bold;
-			color: white;
-			display: flex;
-			justify-content: space-evenly;
-			margin: 0 auto;
+			// position: absolute;
+		}
+		.header_section{
+	
+			
+			margin-top: 25px;
 			@include mixins.bp-medium{
-				background-image: url(/src/img/main_image.png);
-				height: 65vh;
-				width: 170vw;
-			}
-			.header_section{
-				display: flex;
-				flex-direction: row-reverse;
-				margin-right: auto;
 				// position: relative;
-				padding: 20px;
-				margin-top: 25px;
+	
+			}
+			
+			>h1{
+				font-size: 30px;
+				
 				@include mixins.bp-medium{
-					flex-direction: row;
+					// margin-left: 4rem;
 				}
 				
-				>h1{
-					font-size: 30px;
-					margin-left: 8rem;
-					@include mixins.bp-medium{
-						margin-left: 4rem;
-					}
-					
-				}
-				>nav{
+			}
+			.toggle{
+				opacity: 0;
+				display: none;
+			}
+			.toggle:checked + nav{
+				display: block;
+			}
+			label{
+				position: absolute;
+				top: 2.5em;
+				left: 1em;
+				margin: 10px;
+				// font-size: 50px;
+				z-index: 6;
+				color: white;
+				@include mixins.bp-medium{
 					display: none;
-					@include mixins.bp-medium{
-						display: block;
-						margin-left:50px ;
-					}
-					>ul{
-					display: flex;
-					flex-direction: row;
-					font-weight: 600;
-					font-size: 12px;
-					
-					
-					>li{
-						margin:10px;
-						@include mixins.bp-medium{
-							margin-left: 4rem;
-						}
-						a{
-							text-decoration: none;
-							list-style-type: none;
-							color: black;
-							@include mixins.bp-medium{
-								color: white;
-							}
-							&:hover{
-								color: rgb(189, 166, 219);
-								border-bottom: 1px solid rgb(189, 166, 219);
-								transition: color 0.3s ease; 
-							}
-						}
-					}
-					}
 				}
-				.toggle{
-					display:flex;
-					flex-direction: column; 
-					padding: 6px;
-					cursor: pointer;
-					@include mixins.bp-medium{
-						display: none;
-					}
-					>div{
-						
-						background-color: white;
-						width: 25px;
-						height: 2px;
-						margin: 2px;
-						transition: all .4s ease;
-						transform-origin:0 0; 
-					}
-				}
-				.coolTog{
+				
+				span{
+					width: 32px;
+					height: 2px;
 					display: block;
-					background-color: white;
-					width: 100%;
-					color:black;
+					background-color: rgb(145, 145, 145);
+					margin:10px;
+					transition: .5s;
 				}
 			}
-			
-		}
-		.arrows{
-			background-color: black;
-			display:flex;
-			flex-direction: row;
-			height: 10vh;
-			width:15vh;
-			margin-left: auto;
-			margin-top:-10vh ;
-
-			
-			
-			@include mixins.bp-medium{
-				margin-top: 55vh;
-				height: 10vh;
-				width:40vh;
+			.toggle:checked ~ label{
+				&:hover span{
+					background-color: rgb(145, 145, 145);
+				}
+				span{
+					background-color: black;
+					&:nth-child(1){
+						transform: translateY(12px) rotate(-405deg) ;
+					
+					}
+					&:nth-child(2){
+						transform: rotate(405deg);
+					}
+					
+				}
 			}
-
+			.nav{
+				text-align: center;
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100vw;
+				z-index: 5;
 		
-			// .arrow_left{
-			// 	transform: rotate(-180deg);
-			// 	width: 30px;
-			// 	margin: auto;
-			// 	flex-grow: .5;
-			// 	&:hover{
-			// 		color: rgb(189, 166, 219);
-					
-			// 		transition: color 0.3s ease; 
-			// 	}
+				@include mixins.bp-medium{
+					background: none;
+					display: block;
+					position: fixed;
+					height: auto;	
+					width: auto;
+				}
+				nav{
+					display: none;
+					background: white;
+					transition: ease-in-out .5s;
+					@include mixins.bp-medium{
+						display:block;
+						background: none;
+						height: 15vh;
+					}
+						ul{
+							display: flex;
+							flex-direction: row;
+							margin-left: 6em;
+							@include mixins.bp-medium{
+								flex-direction: row;
+								justify-content: flex-end;
+								margin-right: 100px;
+							}
+							li{
+								margin: 30px;
+								margin-top: 4em;
+								a{
+									text-decoration: none;
+									color: black;
+									font-size: 13px;
+									&:hover{
+										color: rgb(189, 166, 219);
+									border-bottom: 1px solid rgb(189, 166, 219);
+									transition: color 0.3s ease;
 				
-	
-			// }
-			// .arrow_right{
-			// 	margin: auto;
-			// 	width: 30px;
-			// 	flex-grow: .5;
-				
-			// }
-			
-			.arrows_left{
-				display: flex;
-				flex-direction: column;
-				margin: auto;
-				margin-right: 1px;
-				background-color: black;
-				&:hover{
-					color: #A0A0A0;;
-					// margin: 20px;
-					
-				}
-				
-				>div{
-					background-color: white;
-					width: 15px;
-					height: 2px;
-					margin: 4px;
-					
-					
-				}
-				.left_skew_down{
-					transform: rotate(-45deg);
-				}
-				.left_skew_up{
-					transform: rotate(45deg);
-				}
-	
+										
+									}
+									@include mixins.bp-medium{
+										color: variables.$white;
+									}
+								}	
+							}	
+						}
+				}	
 			}
-			.arrows_right{
-				display: flex;
-				flex-direction: column;
-				margin: auto;
-				.arrows_right:hover .right_skew_down,
-				.arrows_right:hover .right_skew_up {
-					color: blue;
-}
-				>div{
-					background-color: white;
-					width: 15px;
-					height: 2px;
-					margin: 4px;
-				}
-				.right_skew_down{
-					transform: rotate(45deg);
-				}
-				.right_skew_up{
-					transform: rotate(-45deg);
-				}
-			}
-		}
+		}	
+	}
+	
+		
 		.content_main{
 			margin: 60px 30px 60px 30px;
 			@include mixins.bp-medium{
 				margin: auto 10px ;
+				width: 55%;
 			}
 			
 			>h2{
@@ -282,9 +236,7 @@ body {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-					// background-color: black;
 					width: 15px;
-					// height: 2px;
 					margin: 1px;
 				
 						.learn_arrow_top{
@@ -302,12 +254,83 @@ body {
 				}
 			}
 		}
-	}
+		.arrows{
+			background-color: black;
+			display:flex;
+			flex-direction: row;
+			height: 10vh;
+			width:15vh;
+			margin-left: auto;
+			
+			position: absolute;
+			top: 40%;
+    		right: 0;
+    		position: absolute;
+			
+			
+			@include mixins.bp-medium{
+				top: 50%;
+    			right: 27.5%;
+			}
+			
+			.arrows_left{
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+				margin-right: 1px;
+				background-color: black;
+				&:hover{
+					color: #A0A0A0;;
+					
+				}
+				
+				>div{
+					background-color: white;
+					width: 15px;
+					height: 2px;
+					margin: 4px;
+					
+					
+				}
+				.left_skew_down{
+					transform: rotate(-45deg);
+				}
+				.left_skew_up{
+					transform: rotate(45deg);
+				}
+	
+			}
+			.arrows_right{
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+				.arrows_right:hover .right_skew_down,
+				.arrows_right:hover .right_skew_up {
+					color: blue;
+				}
+				>div{
+					background-color: white;
+					width: 15px;
+					height: 2px;
+					margin: 4px;
+				}
+				.right_skew_down{
+					transform: rotate(45deg);
+				}
+				.right_skew_up{
+					transform: rotate(-45deg);
+				}
+			}
+		}
+}
+
+
+.container{
+	
 	.container_flex_bottom{
 		overflow: hidden;
 		@include mixins.bp-medium{
 			display: flex;
-			// height: 50vh;
 		}
 		.image_one{
 			background-image: url(/src/img/image_one.png);
@@ -334,11 +357,10 @@ body {
 			height: 40vh;
 			
 			&:hover{
-				// transform: scale(1.1);
 				background-color: rgb(160, 160, 177);
 				background-blend-mode: multiply;
 				transition: ease-in-out .3s;
-				// transform-origin: 50% 50% 50% 50%;
+				
 			}
 			@include mixins.bp-medium{
 				height: 40vh;
@@ -348,7 +370,7 @@ body {
 			margin: 60px 30px 60px 30px;
 			
 			@include mixins.bp-medium{
-				margin: auto 30px 0px;
+				margin: auto 30px;
 			}
 			>h3{
 				font-size: 13px;
