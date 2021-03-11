@@ -199,8 +199,19 @@ body {
 .top-part header .header_section {
   margin-top: 25px;
 }
+@media screen and (min-width: 768px) {
+  .top-part header .header_section {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .top-part header .header_section > h1 {
   font-size: 30px;
+}
+@media screen and (min-width: 768px) {
+  .top-part header .header_section > h1 {
+    margin: 0px;
+  }
 }
 .top-part header .header_section .toggle {
   opacity: 0;
@@ -256,7 +267,7 @@ body {
   .top-part header .header_section .nav {
     background: none;
     display: block;
-    position: fixed;
+    position: relative;
     height: auto;
     width: auto;
   }
@@ -265,12 +276,12 @@ body {
   display: none;
   background: white;
   transition: ease-in-out 0.5s;
+  height: 15vh;
 }
 @media screen and (min-width: 768px) {
   .top-part header .header_section .nav nav {
     display: block;
     background: none;
-    height: 15vh;
   }
 }
 .top-part header .header_section .nav nav ul {
@@ -282,12 +293,17 @@ body {
   .top-part header .header_section .nav nav ul {
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 100px;
+    margin-left: 0;
   }
 }
 .top-part header .header_section .nav nav ul li {
   margin: 30px;
   margin-top: 4em;
+}
+@media screen and (min-width: 768px) {
+  .top-part header .header_section .nav nav ul li {
+    margin: 0;
+  }
 }
 .top-part header .header_section .nav nav ul li a {
   text-decoration: none;
@@ -305,11 +321,16 @@ body {
   }
 }
 .top-part .content_main {
-  margin: 60px 30px 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  height: 50vh;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .top-part .content_main {
-    margin: auto 10px;
+    height: 60vh;
     width: 55%;
   }
 }
@@ -377,14 +398,16 @@ body {
   width: 15vh;
   margin-left: auto;
   position: absolute;
-  top: 40%;
+  top: -6rem;
   right: 0;
   position: absolute;
 }
 @media screen and (min-width: 768px) {
   .top-part .arrows {
-    top: 50%;
-    right: 27.5%;
+    top: auto;
+    bottom: 0;
+    left: 0px;
+    right: auto;
   }
 }
 .top-part .arrows .arrows_left {
@@ -482,11 +505,16 @@ body {
   }
 }
 .container .container_flex_bottom .content_second {
-  margin: 60px 30px 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  height: 50vh;
 }
 @media screen and (min-width: 768px) {
   .container .container_flex_bottom .content_second {
     margin: auto 30px;
+    height: 30vh;
   }
 }
 .container .container_flex_bottom .content_second > h3 {

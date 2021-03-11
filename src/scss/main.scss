@@ -72,7 +72,8 @@ body {
 			
 			margin-top: 25px;
 			@include mixins.bp-medium{
-				// position: relative;
+				display: flex;
+				flex-direction: row;
 	
 			}
 			
@@ -80,7 +81,7 @@ body {
 				font-size: 30px;
 				
 				@include mixins.bp-medium{
-					// margin-left: 4rem;
+					margin: 0px;
 				}
 				
 			}
@@ -139,7 +140,7 @@ body {
 				@include mixins.bp-medium{
 					background: none;
 					display: block;
-					position: fixed;
+					position: relative;
 					height: auto;	
 					width: auto;
 				}
@@ -147,10 +148,11 @@ body {
 					display: none;
 					background: white;
 					transition: ease-in-out .5s;
+					height: 15vh;
 					@include mixins.bp-medium{
 						display:block;
 						background: none;
-						height: 15vh;
+						// height: 15vh;
 					}
 						ul{
 							display: flex;
@@ -159,11 +161,16 @@ body {
 							@include mixins.bp-medium{
 								flex-direction: row;
 								justify-content: flex-end;
-								margin-right: 100px;
+								// margin-right: 100px;
+								margin-left: 0;
 							}
 							li{
 								margin: 30px;
 								margin-top: 4em;
+								@include mixins.bp-medium{
+									margin: 0;
+									
+								}
 								a{
 									text-decoration: none;
 									color: black;
@@ -188,9 +195,15 @@ body {
 	
 		
 		.content_main{
-			margin: 60px 30px 60px 30px;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 10px;
+			height: 50vh;
+			position: relative;
 			@include mixins.bp-medium{
-				margin: auto 10px ;
+				height: 60vh;
 				width: 55%;
 			}
 			
@@ -261,16 +274,19 @@ body {
 			height: 10vh;
 			width:15vh;
 			margin-left: auto;
-			
 			position: absolute;
-			top: 40%;
-    		right: 0;
+			top: -6rem;
+			right: 0;
     		position: absolute;
 			
 			
 			@include mixins.bp-medium{
-				top: 50%;
-    			right: 27.5%;
+				// top: 50%;
+				// right: 27.5%;
+				top: auto;
+				bottom: 0;
+				left: 0px;
+				right: auto;
 			}
 			
 			.arrows_left{
@@ -367,10 +383,15 @@ body {
 			}
 		}
 		.content_second{
-			margin: 60px 30px 60px 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 10px;
+			height: 50vh;
 			
 			@include mixins.bp-medium{
 				margin: auto 30px;
+				height:30vh;
 			}
 			>h3{
 				font-size: 13px;
